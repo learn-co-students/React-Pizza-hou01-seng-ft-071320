@@ -1,12 +1,11 @@
 import React from "react"
 
-const PizzaForm = () => {
+const PizzaForm = (props) => {
   return(
-      <div className="form-row">
+      <div className="form-row" onSubmit={}>
         <div className="col-5">
             <input type="text" className="form-control" placeholder="Pizza Topping" value={
-                //Pizza Topping Should Go Here
-                null
+                props.selectedPizza.topping
               }/>
         </div>
         <div className="col">
@@ -31,7 +30,7 @@ const PizzaForm = () => {
           </div>
         </div>
         <div className="col">
-          <button type="submit" className="btn btn-success" onClick={console.log}>Submit</button>
+          <button type="submit" className="btn btn-success" >Submit</button>
         </div>
       </div>
 
